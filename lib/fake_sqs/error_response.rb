@@ -20,7 +20,7 @@ module FakeSQS
       xml.ErrorResponse do
         xml.Error do
           xml.Type type
-          xml.Code code
+          xml.Code "AWS.SimpleQueueService.#{code}"
           xml.Message error.to_s
           xml.Detail
         end
